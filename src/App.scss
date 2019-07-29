@@ -1,0 +1,17 @@
+@import 'styles/variables';
+
+.App {
+  text-align: center;
+}
+
+.margin5 {
+  margin: 5px;
+}
+
+.centerAlign {
+	margin: 0 auto;
+}
+
+input::placeholder {
+	color : $light-grey;
+}
