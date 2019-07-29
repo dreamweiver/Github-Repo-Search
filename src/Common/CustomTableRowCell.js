@@ -2,6 +2,7 @@ import { withStyles } from '@material-ui/core/styles';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 
+// Custom styled Table Rows
 const StyledTableRow = withStyles(theme => ({
   root: {
     '&:nth-of-type(odd)': {
@@ -10,6 +11,7 @@ const StyledTableRow = withStyles(theme => ({
   },
 }))(TableRow);
 
+// Custom styled Table Cels
 const StyledTableCell = withStyles(theme => ({
   head: {
     backgroundColor: theme.palette.common.black,

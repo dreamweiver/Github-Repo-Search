@@ -17,6 +17,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+// application header with title and icon
 function HeaderAppBar(props) {
   const { title, icon } = props;
   const classes = useStyles();
@@ -30,7 +31,6 @@ function HeaderAppBar(props) {
             </Typography>
              <Avatar alt="drone" src={icon} className={'margin5'}/>
             <div className={classes.grow} />
-
           </Toolbar>
         </AppBar>
       </div>

@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-
-let githubApiUrl = 'https://api.github.com';
+let githubApiUrl = 'https://api.github.com'; // Github api base url
 
 const GithubAccess = {
 	getRepositories:(query, sortBy, orderBy) => {

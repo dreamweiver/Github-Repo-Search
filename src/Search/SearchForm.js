@@ -41,7 +41,7 @@ const renderField = ({
   </div>
 )
 
-
+// Redux SearchForm 
 const SearchForm = (props) => {
   const classes = useStyles();
   const { handleSubmit, isSubmitting} = props

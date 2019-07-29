@@ -30,13 +30,14 @@ const useStyles2 = makeStyles(theme => ({
   }
 }));
 
-
+ // table to show search results 
  function SearchResults(props) {
   const classes = useStyles2();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const {data} = props;
 
+  // tracking the no of empty rows to be shown on the page
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
 
   // update the page on the state to reflect the page change
@@ -49,7 +50,6 @@ const useStyles2 = makeStyles(theme => ({
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   }
-
 
   // When no results, dont render table
   if(!!data && data.length === 0) {

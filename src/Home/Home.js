@@ -15,7 +15,7 @@ import NotificationBar from './../Common/Notification';
 import {ColorCircularProgress, ColorLinearProgress} from './../Common/CustomProgressBar';
 import './home.scss';
 
-const notificationDimissTime =  5000;
+const notificationDimissTime =  5000;  // notification dismiss timeout
 class Home extends Component {
 
   constructor(){
@@ -45,9 +45,8 @@ class Home extends Component {
     this.setState({...this.state, 'notification': {...notification}});
   }
 
-
+  // form submit handler 
   showResults(values) {
-    console.info('submit form values are' ,values);
     const searchQuery = values.searchQuery &&  values.searchQuery.trim();
     const sortBy = 'stars';
     const orderBy= 'desc';
@@ -57,8 +56,6 @@ class Home extends Component {
       this.setState({...this.state, noResults: false, searchResults: [], isLoading: true}); // show the loader or spinner
 
       GithubAccess.getRepositories(searchQuery, sortBy, orderBy).then(results => {
-        console.info('results:', results);
-
         let mappedResults = GenericHelper.mapRepoItems(results.items);
 
         this.setState({...this.state, 

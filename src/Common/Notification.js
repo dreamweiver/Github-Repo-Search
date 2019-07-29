@@ -46,6 +46,7 @@ const useStyles1 = makeStyles(theme => ({
 }));
 
 
+// Custom snackbar notification 
 function NotificationBar(props) {
   const {variant, msg, showNotification, dismissAfter, onDimiss} = props;
   const classes = useStyles1();
@@ -54,7 +55,6 @@ function NotificationBar(props) {
   function handleClose(event) {
     onDimiss(event);
  }
-
 
   return (
     <div>
